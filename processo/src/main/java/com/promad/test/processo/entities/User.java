@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,6 +21,7 @@ public class User implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	private String numproc;
 	private String nomeenv;
 	private String nomerepre;
 	private String juizresp;
@@ -39,10 +38,11 @@ public class User implements Serializable{
 		
 	}
 
-	public User(Long id, String nomeenv, String nomerepre, String juizresp, String tribunal, String phone,
+	public User(Long id, String numproc,String nomeenv, String nomerepre, String juizresp, String tribunal, String phone,
 			String email) {
 		super();
 		this.id = id;
+		this.numproc = numproc;
 		this.nomeenv = nomeenv;
 		this.nomerepre = nomerepre;
 		this.juizresp = juizresp;
@@ -106,12 +106,21 @@ public class User implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+	public String getNumproc() {
+		return numproc;
+	}
+
+	public void setNumproc(String numproc) {
+		this.numproc = numproc;
+	}
 	
 
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
+	}
+	public List<Reu> getReuss() {
+		return reuss;
 	}
 
 	@Override
@@ -126,9 +135,9 @@ public class User implements Serializable{
 		return Objects.equals(id, other.id);
 	}
 
-	public List<Reu> getReuss() {
-		return reuss;
-	}
+	
+
+
 
 	
 	
