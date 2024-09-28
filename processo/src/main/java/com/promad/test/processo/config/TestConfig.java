@@ -28,8 +28,8 @@ public class TestConfig implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		User u1 = new User(null, "Andre Saches Aleida", "Mario Bross", "Marina Silva", "Comarca Santo Andre", "9999", "sa@gmail.com");
-		User u2 = new User(null, "Sandro Quintana", "Sabrina Mendes", "Airton Silva", "Comarca Campinas", "9999", "sd@gmail.com");
+		User u1 = new User(null, "1225896","Andre Saches Aleida", "Mario Bross", "Marina Silva", "Comarca Santo Andre", "9999", "sa@gmail.com");
+		User u2 = new User(null, "1367787","Sandro Quintana", "Sabrina Mendes", "Airton Silva", "Comarca Campinas", "9999", "sd@gmail.com");
 		
 		Reu o1 = new Reu(null, Instant.parse("2019-06-20T19:53:07Z"), "Jõao da Penha", u1);
 		Reu o2 = new Reu(null, Instant.parse("2019-07-21T03:42:10Z"), "Marcos Paíva",u2);
